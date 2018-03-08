@@ -54,3 +54,7 @@ INSERT INTO film (name) VALUES ('Wonder Woman');
 
 INSERT INTO actor_film (actor_id, film_id) VALUES (8,6);
 INSERT INTO actor_film (actor_id, film_id) VALUES (9,6);
+
+INSERT INTO film (name) VALUES ('Star Wars: The Force Awakens');
+
+INSERT INTO actor_film (actor_id, film_id) VALUES (6,7);
