@@ -1,0 +1,22 @@
+DROP DATABASE IF EXISTS film_db;
+CREATE DATABASE film_db;
+
+\c film_db;
+
+CREATE TABLE actors (
+  id BIGSERIAL PRIMARY KEY,
+  name TEXT NOT NULL
+);
+
+CREATE TABLE films (
+  id BIGSERIAL PRIMARY KEY,
+  name TEXT NOT NULL,
+  year INTEGER NOT NULL
+);
+
+CREATE TABLE characters (
+  id BIGSERIAL PRIMARY KEY,
+  name TEXT NOT NULL,
+  actor_id INTEGER REFERENCES actors(id),
+  film_id INTEGER REFERENCES films(id)
+);

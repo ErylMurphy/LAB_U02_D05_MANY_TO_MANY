@@ -23,7 +23,11 @@ Find all the actors that were in Get Out.
 
 > SQL here
 
-Find the films that Harrison Ford was in.
+Find the films that Han Solo was in.
+
+> SQL here
+
+Find all the films that Harrison Ford was in.
 
 > SQL here
 
