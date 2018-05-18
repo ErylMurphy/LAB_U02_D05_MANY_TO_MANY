@@ -1,16 +1,22 @@
 # Movies join tables lab
 
+Create the database tables
+
+```
+psql -f schema.sql
+```
+
 Seed your database with film and actor data
 
 ```
 psql -f seed.sql
 ```
 
-Connect to the `actorfilm` database
+Connect to the `film_db` database
 
 ```
 psql
-#= \c actorfilm
+#= \c film_db
 ```
 
 Browse the tables to see what data you have in them.
