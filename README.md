@@ -27,16 +27,31 @@ For the following exercises write a SQL statement that returns the desired data.
 
 Find all the actors that were in Get Out.
 
-> SQL here
+> SELECT actors.name
+  from actors
+  JOIN characters on actors.id = characters.actor_id
+  JOIN films on characters.film_id = films.id
+  where films.name = 'Get Out';
 
 Find the films that Han Solo was in.
 
-> SQL here
+> SQL SELECT films.name
+  from films
+  JOIN characters on films.id = characters.film_id
+  where characters.name = 'Han Solo';
 
 Find all the films that Harrison Ford was in.
 
-> SQL here
+>
+SELECT films.name
+  from films
+  JOIN characters on films.id = characters.film_id
+  JOIN actors on characters.actor_id = actors.id
+  where actors.name = 'Harrison Ford';
 
 Insert the film and actor data for two movies that you liked not in the database. Don't forget the JOIN table!
 
-> SQL here
+> 
+INSERT INTO films VALUES (DEFAULT, 'The Shape of Water', 2018);
+INSERT INTO actors VALUES (DEFAULT, 'Sally Hawkins');
+INSERT INTO characters VALUES (DEFAULT, 'Mary', 8, 11);
